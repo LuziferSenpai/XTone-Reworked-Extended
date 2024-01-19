@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "B": {
+            "tag": "xtonesreworked:lave"
+        },
+        "C": {
+            "item": "minecraft:cyan_dye"
+        }
+    },
+    "pattern": [
+        "BBB",
+        "BCB",
+        "BBB"
+    ],
+    "result": {
+        "item": "xtonesreworkedextended:lave_block_cyan_0",
+        "count": 8
+    }
+}
