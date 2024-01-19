@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "xtonesreworkedextended:lave_block_orange_15"
+                }
+            ]
+        }
+    ]
+}
