@@ -13,7 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import dev.luzifersenpai.xtonesreworkedextended.blocks.LavePurple;
+import dev.luzifersenpai.xtonesreworkedextended.blocks.LaveWhite;
 import dev.luzifersenpai.xtonesreworkedextended.XtonesReworkedExtended;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ public class BlockInit {
             "xtones_reworked_extended_tab",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.xtones_reworked_extended"))
-                    .icon(LavePurple.LAVE_BLOCK_PURPLE_0.get()::getDefaultInstance)
+                    .icon(LaveWhite.LAVE_BLOCK_WHITE_12.get()::getDefaultInstance)
                     .displayItems(((itemDisplayParameters, output) -> XTONES_REWORKED_EXTENDED_TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()))))
                     .build()
     );

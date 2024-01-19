@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "xtonesreworkedextended:block/lave_brown/15"
+    }
+}
