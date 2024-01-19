@@ -27,7 +27,7 @@ public class XtonesReworkedExtended {
         LaveOrange.stupidJava();
         LaveYellow.stupidJava();
         LaveLime.stupidJava();
-
+        LaveGreen.stupidJava();
 
 
 
