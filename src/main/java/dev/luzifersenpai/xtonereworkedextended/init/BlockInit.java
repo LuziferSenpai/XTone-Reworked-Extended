@@ -32,9 +32,7 @@ public class BlockInit {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.xtone_reworked_extended"))
                     .icon(LavePurple.LAVE_BLOCK_PURPLE_0.get()::getDefaultInstance)
-                    .displayItems(((itemDisplayParameters, output) -> {
-                        XTONE_TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()));
-                    }))
+                    .displayItems(((itemDisplayParameters, output) -> XTONE_TAB_ITEMS.forEach(itemLike -> output.accept(itemLike.get()))))
                     .build()
     );
 
@@ -45,5 +43,5 @@ public class BlockInit {
         XTONE_TAB_ITEMS.add(newBlockItem);
 
         return newBlockItem;
-    };
+    }
 }
