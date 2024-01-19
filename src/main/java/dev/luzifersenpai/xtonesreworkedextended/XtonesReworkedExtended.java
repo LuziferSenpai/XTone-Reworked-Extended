@@ -33,5 +33,6 @@ public class XtonesReworkedExtended {
         LaveBlue.stupidJava();
         LavePurple.stupidJava();
         LaveMagenta.stupidJava();
+        LavePink.stupidJava();
     }
 }
