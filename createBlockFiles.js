@@ -2,7 +2,7 @@ const fs = require("fs");
 const modName = "xtonesreworkedextended"
 const pathToAssetsModName = `src/main/resources/assets/${modName}/`
 const pathToDataModName = `src/main/resources/data/${modName}/`
-const color = "light_blue"
+const color = "blue"
 var dummyArray = []
 
 for (var i = 0; i < 16; i++) {
