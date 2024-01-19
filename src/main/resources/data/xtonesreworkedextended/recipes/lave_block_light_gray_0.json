@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+        "B": {
+            "tag": "xtonesreworked:lave"
+        },
+        "C": {
+            "item": "minecraft:light_gray_dye"
+        }
+    },
+    "pattern": [
+        "BBB",
+        "BCB",
+        "BBB"
+    ],
+    "result": {
+        "item": "xtonesreworkedextended:lave_block_light_gray_0",
+        "count": 8
+    }
+}

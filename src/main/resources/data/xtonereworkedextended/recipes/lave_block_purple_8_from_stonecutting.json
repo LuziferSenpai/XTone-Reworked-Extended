@@ -1,7 +1,0 @@
-{
-    "type": "minecraft:stinecutting",
-    "ingredient": {
-        "tag": "xtonereworkedextended:lave_purple"
-    },
-    "result": "xtonereworkedextended:lave_block_purple_8"
-}

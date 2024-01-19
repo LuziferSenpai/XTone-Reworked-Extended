@@ -1,41 +1,41 @@
 const fs = require("fs");
-const modName = "xtonereworkedextended"
+const modName = "xtonesreworkedextended"
 const pathToAssetsModName = `src/main/resources/assets/${modName}/`
 const pathToDataModName = `src/main/resources/data/${modName}/`
-const blockName = "lave_block_purple"
-const fileName = "lave_purple"
+const color = "gray"
+var dummyArray = []
 
 for (var i = 0; i < 16; i++) {
     fs.writeFileSync(
-        `${pathToAssetsModName}/blockstates/${blockName}_${i}.json`,
+        `${pathToAssetsModName}/blockstates/lave_block_${color}_${i}.json`,
         JSON.stringify({
             "variants": {
                 "": {
-                    "model": `${modName}:block/${blockName}_${i}`
+                    "model": `${modName}:block/lave_block_${color}_${i}`
                 }
             }
         }, null, 4)
     )
 
     fs.writeFileSync(
-        `${pathToAssetsModName}/models/block/${blockName}_${i}.json`,
+        `${pathToAssetsModName}/models/block/lave_block_${color}_${i}.json`,
         JSON.stringify({
             "parent": "block/cube_all",
             "textures": {
-                "all": `${modName}:block/${fileName}/${i}`
+                "all": `${modName}:block/lave_${color}/${i}`
             }
         }, null, 4)
     )
 
     fs.writeFileSync(
-        `${pathToAssetsModName}/models/item/${blockName}_${i}.json`,
+        `${pathToAssetsModName}/models/item/lave_block_${color}_${i}.json`,
         JSON.stringify({
-            "parent": `${modName}:block/${blockName}_${i}`
+            "parent": `${modName}:block/lave_block_${color}_${i}`
         }, null, 4)
     )
 
     fs.writeFileSync(
-        `${pathToDataModName}/loot_tables/blocks/${blockName}_${i}.json`,
+        `${pathToDataModName}/loot_tables/blocks/lave_block_${color}_${i}.json`,
         JSON.stringify({
             "type": "minecraft:block",
             "pools": [
@@ -44,7 +44,7 @@ for (var i = 0; i < 16; i++) {
                     "entries": [
                         {
                             "type": "minecraft:item",
-                            "name": `${modName}:${blockName}_${i}`
+                            "name": `${modName}:lave_block_${color}_${i}`
                         }
                     ]
                 }
@@ -54,7 +54,7 @@ for (var i = 0; i < 16; i++) {
 
     if (i === 0) {
         fs.writeFileSync(
-            `${pathToDataModName}/recipes/${blockName}_${i}.json`,
+            `${pathToDataModName}/recipes/lave_block_${color}_${i}.json`,
             JSON.stringify({
                 "type": "minecraft:crafting_shaped",
                 "key": {
@@ -62,12 +62,12 @@ for (var i = 0; i < 16; i++) {
                         "tag": "xtonesreworked:lave"
                     },
                     "C": {
-                        "item": "minecraft:purple_dye"
+                        "item": `minecraft:${color}_dye`
                     }
                 },
                 "pattern": ["BBB", "BCB", "BBB"],
                 "result": {
-                    "item": `${modName}:${blockName}_${i}`,
+                    "item": `${modName}:lave_block_${color}_${i}`,
                     "count": 8
                 }
             }, null, 4)
@@ -75,13 +75,24 @@ for (var i = 0; i < 16; i++) {
     }
 
     fs.writeFileSync(
-        `${pathToDataModName}/recipes/${blockName}_${i}_from_stonecutting.json`,
+        `${pathToDataModName}/recipes/lave_block_${color}_${i}_from_stonecutting.json`,
         JSON.stringify({
-            "type": "minecraft:stinecutting",
+            "type": "minecraft:stonecutting",
+            "count": 1,
             "ingredient": {
-                "tag": `${modName}:${fileName}`
+                "tag": `${modName}:lave_${color}`
             },
-            "result": `${modName}:${blockName}_${i}`
+            "result": `${modName}:lave_block_${color}_${i}`
         }, null, 4)
     )
+
+    dummyArray.push(`${modName}:lave_block_${color}_${i}`)
 }
+
+fs.writeFileSync(
+    `${pathToDataModName}/tags/items/lave_${color}.json`,
+    JSON.stringify({
+        "replace": false,
+        values: dummyArray
+    }, null, 4)
+)

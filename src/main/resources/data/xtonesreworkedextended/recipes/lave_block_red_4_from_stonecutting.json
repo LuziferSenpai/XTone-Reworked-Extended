@@ -1,0 +1,8 @@
+{
+    "type": "minecraft:stonecutting",
+    "count": 1,
+    "ingredient": {
+        "tag": "xtonesreworkedextended:lave_red"
+    },
+    "result": "xtonesreworkedextended:lave_block_red_4"
+}
